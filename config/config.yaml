@@ -1,0 +1,40 @@
+# AWS Configuration
+aws:
+  access_key_id: "${AWS_ACCESS_KEY_ID}"          # Set via environment variable
+  secret_access_key: "${AWS_SECRET_ACCESS_KEY}"  # Set via environment variable
+  region: "us-east-1"                            # AWS Region
+
+# Grok AI Configuration
+grok:
+  model: "grok-3"
+  max_tokens: 1000
+  temperature: 0.7
+  
+# Text-to-Speech Configuration (Amazon Polly)
+tts:
+  voice_id: "Ruth"            # Polly voice (Ruth, Joanna, Matthew, Amy, etc.)
+  engine: "neural"        # generative (highest quality), neural, or standard
+  language_code: "en-US"      # Language code for Polly
+  
+# xLights Configuration
+xlights:
+  sequence_format: "xsq"
+  default_timing: "Words"
+  
+# FPP Configuration
+fpp:
+  enabled: true
+  auto_upload: false
+  auto_start: false
+  
+# Server Configuration
+server:
+  host: "0.0.0.0"
+  port: 5001
+  debug: false
+  
+# File Configuration
+files:
+  output_directory: "output"
+  max_file_age_days: 30
+  cleanup_on_startup: false

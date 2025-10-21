@@ -4,9 +4,6 @@
 *.key
 *.pem
 
-# AWS credentials (hardcoded in config.yaml - REMOVE BEFORE PUSHING)
-config/config.yaml
-
 # Python
 __pycache__/
 *.py[cod]
