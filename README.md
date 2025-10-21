@@ -79,7 +79,8 @@ AWS_REGION="us-east-1"
 GROK_API_KEY="your-grok-api-key"
 
 # FPP Hardware (Optional, for playback)
-FPP_HOST="192.168.50.200"
+# Set to the IP address of your Falcon Player controller
+FPP_HOST="192.168.x.x"
 FPP_PORT="80"
 ```
 
@@ -99,12 +100,14 @@ grok:
   model: "grok-3"
   temperature: 0.7                    # 0.0 = deterministic, 1.0 = creative
 
-# FPP Hardware
+# FPP Hardware (set your controller IP here)
 fpp:
   enabled: true
   auto_upload: false                  # Auto-send sequences to FPP
   auto_start: false                   # Auto-play on FPP after upload
 ```
+
+> **Note**: Update `FPP_HOST` in `.env` with your Falcon Player controller's IP address
 
 ### 4. Prepare xLights Models
 
@@ -112,13 +115,16 @@ Place your xLights model files in:
 
 ```
 models/active_models/
-  ├── NorRednoseReindeer.xmodel       # Model definition (150 nodes)
-  └── norfreindeer_seq_antlers.xsq    # Sequence template
+  ├── [YOUR_MODEL].xmodel       # Model definition (e.g., NorRednoseReindeer.xmodel)
+  └── [YOUR_SEQUENCE].xsq       # Sequence template (e.g., norfreindeer_seq.xsq)
 ```
 
 **What these files contain:**
 - **xmodel**: Physical node definitions + face elements (Eyes, Nose, Outline, Mouth) + state definitions (colors, node ranges)
 - **xsq**: Sequence template specifying which state to use and frame timing
+
+> **Demo Included**: The project includes a 150-node Intel-mapped Reindeer model as an example. 
+> **👉 ADD YOUR OWN!** You can add any xLights model you want - dragons, snowflakes, displays, etc. Just place your `.xmodel` and `.xsq` files in `models/active_models/` and the system will dynamically load them!
 
 ### 5. Run the Application
 
@@ -304,7 +310,10 @@ curl -X POST http://localhost:5001/query \
 **Solution**: Ensure `.env` file exists in project root with AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY
 
 ### Issue: "FPP connection failed"
-**Solution**: Verify FPP hardware is at 192.168.50.200:80, or update FPP_HOST in `.env`
+**Solution**: 
+1. Verify your FPP hardware is powered on and on the network
+2. Update `FPP_HOST` in `.env` with the correct IP address (check your FPP web interface)
+3. Ensure both your computer and FPP controller are on the same network
 
 ### Issue: "Colors look wrong on display"
 **Solution**: Verify state name in XSQ matches xmodel stateInfo definitions
