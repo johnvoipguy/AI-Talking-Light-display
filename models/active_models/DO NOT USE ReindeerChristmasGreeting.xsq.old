@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsequence BaseChannel="1" ChanCtrlBasic="0" ChanCtrlColor="0" FixedPointTiming="1" ModelBlending="true" name="ReindeerChristmasGreeting" version="2023.14">
+  <head>
+    <author>xLights Designer</author>
+    <author-email></author-email>
+    <website></website>
+    <song>Christmas Greeting</song>
+    <artist>AI Generated</artist>
+    <album></album>
+    <MusicURL></MusicURL>
+    <comment>Themed Christmas greeting sequence for interactive reindeer character</comment>
+  </head>
+  
+  <!-- Timing tracks for lip-sync and effects -->
+  <TimingTrack name="Phonemes" type="timing">
+    <Interval start="0.100" end="0.300" label="M"/>
+    <Interval start="0.300" end="0.500" label="E"/>
+    <Interval start="0.500" end="0.700" label="R"/>
+    <Interval start="0.700" end="0.900" label="Y"/>
+    <Interval start="1.000" end="1.300" label="K"/>
+    <Interval start="1.300" end="1.500" label="R"/>
+    <Interval start="1.500" end="1.700" label="I"/>
+    <Interval start="1.700" end="1.900" label="S"/>
+    <Interval start="1.900" end="2.100" label="T"/>
+    <Interval start="2.100" end="2.300" label="M"/>
+    <Interval start="2.300" end="2.500" label="A"/>
+    <Interval start="2.500" end="2.700" label="S"/>
+  </TimingTrack>
+  
+  <!-- Model definitions -->
+  <models>
+    <model name="NorRednoseReindeer" DisplayAs="Custom" StringType="RGB Nodes" Transparency="0" PixelSize="2" ModelBrightness="" Antialias="1" StartSide="B" Dir="L" StrandNames="" NodeNames="" SourceVersion="2023.14" StartChannel="1" DisplayStart="1">
+      <faceInfo Type="NodeRange">
+        <Mouth-AI>14-27,33-34,40-41</Mouth-AI>
+        <Mouth-E>1-14,26-27,33-34,40-41</Mouth-E>
+        <Mouth-FV>12,15,25,28-32</Mouth-FV>
+        <Mouth-L>15-25,28-32</Mouth-L>
+        <Mouth-MBP>2-12</Mouth-MBP>
+        <Mouth-O>34-40,42</Mouth-O>
+        <Mouth-U>18-22,34-35,39-40,42</Mouth-U>
+        <Mouth-WQ>18-22,29-31,35,39</Mouth-WQ>
+        <Mouth-etc>1,13-14,26-27,33-34,40-41</Mouth-etc>
+        <Mouth-rest>14-26</Mouth-rest>
+        <Eyes-Open>51-54,56-71,73-76</Eyes-Open>
+        <FaceOutline>77-87,105-107,125-150</FaceOutline>
+        <Nose>43-50</Nose>
+      </faceInfo>
+    </model>
+  </models>
+  
+  <!-- Effects timeline -->
+  <ElementEffects>
+    <!-- Background face glow -->
+    <Element type="model" name="NorRednoseReindeer">
+      <!-- Eyes always on -->
+      <Effect startTime="0" endTime="10" type="On" color="#C8C8FF" intensity="80"/>
+      
+      <!-- Nose always red -->
+      <Effect startTime="0" endTime="10" type="SingleStrand" color="#FF0000" intensity="100"/>
+      
+      <!-- Face outline warm glow -->
+      <Effect startTime="0" endTime="10" type="SingleStrand" color="#502814" intensity="60"/>
+      
+      <!-- Antlers purple -->
+      <Effect startTime="0" endTime="10" type="SingleStrand" color="#8000FF" intensity="70"/>
+      
+      <!-- Lip-sync mouth movements -->
+      <Effect startTime="0.100" endTime="0.300" type="Faces" Phoneme="MBP" color="#FFFFFF" intensity="100"/>
+      <Effect startTime="0.300" endTime="0.500" type="Faces" Phoneme="E" color="#FFFFFF" intensity="90"/>
+      <Effect startTime="0.500" endTime="0.700" type="Faces" Phoneme="etc" color="#FFFFFF" intensity="80"/>
+      <Effect startTime="0.700" endTime="0.900" type="Faces" Phoneme="E" color="#FFFFFF" intensity="85"/>
+      <Effect startTime="1.000" endTime="1.300" type="Faces" Phoneme="etc" color="#FFFFFF" intensity="70"/>
+      <Effect startTime="1.300" endTime="1.500" type="Faces" Phoneme="etc" color="#FFFFFF" intensity="80"/>
+      <Effect startTime="1.500" endTime="1.700" type="Faces" Phoneme="E" color="#FFFFFF" intensity="90"/>
+      <Effect startTime="1.700" endTime="1.900" type="Faces" Phoneme="etc" color="#FFFFFF" intensity="75"/>
+      <Effect startTime="1.900" endTime="2.100" type="Faces" Phoneme="etc" color="#FFFFFF" intensity="70"/>
+      <Effect startTime="2.100" endTime="2.300" type="Faces" Phoneme="MBP" color="#FFFFFF" intensity="100"/>
+      <Effect startTime="2.300" endTime="2.500" type="Faces" Phoneme="AI" color="#FFFFFF" intensity="95"/>
+      <Effect startTime="2.500" endTime="2.700" type="Faces" Phoneme="etc" color="#FFFFFF" intensity="75"/>
+      <Effect startTime="2.700" endTime="10.0" type="Faces" Phoneme="rest" color="#FFFFFF" intensity="50"/>
+    </Element>
+  </ElementEffects>
+</xsequence>

@@ -1,0 +1,25 @@
+# Lip-sync configuration
+frame_rate: 20  # fps (FPP standard)
+mouth_colors:
+  default_color: [255, 255, 255]  # White RGB
+  phoneme_brightness:
+    AI: 255   # Wide open mouth - brightest
+    E: 200    # Medium open
+    O: 230    # Round mouth
+    U: 180    # Narrow round
+    L: 170    # Tongue position
+    WQ: 150   # Rounded
+    FV: 140   # Teeth on lip
+    MBP: 100  # Closed mouth
+    etc: 120  # Default consonant
+    rest: 50  # Closed/rest position
+
+face_colors:
+  eyes: [200, 200, 255]     # Bright white-blue
+  nose: [255, 0, 0]         # Bright red
+  outline: [80, 40, 20]     # Warm outline
+  antlers: [128, 0, 255]    # Purple
+
+timing:
+  phoneme_smoothing: 0.8    # Blend between phonemes
+  sync_offset_ms: 0         # Audio sync adjustment

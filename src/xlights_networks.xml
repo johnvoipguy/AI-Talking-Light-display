@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Networks computer="WIN-N73J0M8FLSV" GlobalFPPProxy="" GlobalForceLocalIP="" AutoUpdateFromBase="0" BaseShowDir="">
+  <Controller Id="0" Name="WLED_Kitchen_Cab" Description="" Type="Ethernet" Vendor="WLED" Model="WLED" Variant="Generic ESP32" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.50.54" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
+    <network ChannelsPerPacket="1440" KeepChannelNumbers="0" ComPort="192.168.50.54" BaudRate="0" NetworkType="DDP" MaxChannels="858"/>
+  </Controller>
+  <Controller Id="1" Name="WLED_Deck_Roof" Description="" Type="Ethernet" Vendor="WLED" Model="WLED" Variant="Generic ESP32" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.50.53" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
+    <network ChannelsPerPacket="1440" KeepChannelNumbers="0" ComPort="192.168.50.53" BaudRate="1" NetworkType="DDP" MaxChannels="1"/>
+  </Controller>
+  <Controller Id="11" Name="FPP" Description="" Type="Ethernet" Vendor="FPP" Model="FPP Player Only" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.50.200" Protocol="Player Only" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP=""/>
+  <Controller Id="2" Name="WLED_Spare2" Description="" Type="Ethernet" Vendor="WLED" Model="WLED" Variant="Generic ESP32" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.50.52" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
+    <network ChannelsPerPacket="1440" KeepChannelNumbers="0" ComPort="192.168.50.52" BaudRate="2" NetworkType="DDP" MaxChannels="450"/>
+  </Controller>
+</Networks>
