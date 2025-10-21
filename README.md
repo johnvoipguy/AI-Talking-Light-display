@@ -1,4 +1,4 @@
-# 🎄 AI-Driven xLights Integration - Talking Reindeer
+# 🎄 AI-Driven xLights Integration - Talking Props!
 
 Transform text prompts into dynamic, animated Christmas light displays! This project combines **AI text generation**, **text-to-speech synthesis**, **xLights sequencing**, and **real-time light control** to create an intelligent lighting system that responds to natural language.
 
