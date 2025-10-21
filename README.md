@@ -7,8 +7,8 @@ Transform text prompts into dynamic, animated Christmas light displays! This pro
 - **🤖 AI-Powered Response**: Uses Grok AI to generate creative responses to user queries
 - **🔊 Natural Speech Synthesis**: Amazon Polly text-to-speech with multiple voice options
 - **🎨 Dynamic Light Animation**: Generates xLights sequences (FSEQ binary format) synchronized with speech
-- **🎭 Face Element Mapping**: Intelligent mapping of 150-node reindeer model with state-based color system
-- **📡 FPP Hardware Integration**: Direct control of Falcon Player (FPP) hardware at 192.168.50.200
+- **🎭 Face Element Mapping**: Intelligent mapping of any xLights model with state-based color system
+- **📡 FPP Hardware Integration**: Direct control of Falcon Player (FPP) hardware (configure with your own IP)
 - **⚡ Real-Time Processing**: Complete query-to-display pipeline in seconds
 - **🎯 State-Based Colors**: Loads xmodel and XSQ files dynamically for accurate color rendering
 
