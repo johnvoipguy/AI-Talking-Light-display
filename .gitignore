@@ -47,7 +47,6 @@ output/*.json
 output/timings.json
 
 # Local large media files
-images/AI Norf Interactive Display .mp4
 images/IMG_6542.MOV
 
 # Logs
